@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        .stopwatch-container {
+            position: relative;
+            max-width: 300px; /* Optional: Adjust max-width as needed */
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 20px; /* Rounded border */
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .stopwatch {
+            text-align: center;
+            position: fixed;
+            top: 80px; /* Adjust top position as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        #display {
+            font-size: 48px;
+            padding: 10px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            display: inline-block;
+            background-color: #e8e8e8;
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        .controls button {
+            margin: 10px;
+            padding: 8px 16px;
+            font-size: 16px;
+            border-radius: 20px; /* Rounded corners */
+            cursor: pointer;
+        }
+
+        #startStop {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border: none;
+        }
+
+        #startStop:hover {
+            background-color: #45a049; /* Darker green */
+        }
+
+        #lapReset {
+            background-color: #008CBA; /* Blue */
+            color: white;
+            border: none;
+        }
+
+        #lapReset:hover {
+            background-color: #0077A2; /* Darker blue */
+        }
+
+        #reset {
+            background-color: #f44336; /* Red */
+            color: white;
+            border: none;
+        }
+
+        #reset:hover {
+            background-color: #e53935; /* Darker red */
+        }
+
+        #laps-container {
+            max-height: calc(100vh - 180px); /* Adjust max-height as needed */
+            overflow-y: auto;
+            margin-top: 20px;
+            padding-right: 20px;
+        }
+
+        #laps {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #laps li {
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="stopwatch-container">
+        <h1>Stopwatch App</h1>
+        <div class="stopwatch">
+            <div id="display">00:00:00</div>
+            <div class="controls">
+                <button id="startStop" onclick="startStop()">Start</button>
+                <button id="lapReset" onclick="lapReset()">Lap</button>
+                <button id="reset" onclick="resetStopwatch()">Reset</button>
+            </div>
+        </div>
+        <div id="laps-container">
+            <ul id="laps"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
