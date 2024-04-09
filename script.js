@@ -14,12 +14,12 @@ function startStop() {
             pausedTime = 0;
         }
         timer = setInterval(updateTime, 10);
-        document.getElementById("startStop").textContent = "Pause"; // Change button text to "Pause"
+        document.getElementById("startStop").textContent = "Pause"; //  button to "Pause"
         isRunning = true;
     } else {
         clearInterval(timer);
         pausedTime = new Date().getTime() - startTime; // Calculate paused time
-        document.getElementById("startStop").textContent = "Start"; // Change button text to "Start"
+        document.getElementById("startStop").textContent = "Start"; //  button to "Start"
         isRunning = false;
     }
 }
