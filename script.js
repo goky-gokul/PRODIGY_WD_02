@@ -31,7 +31,7 @@ function updateTime() {
     document.getElementById("display").textContent = formattedTime;
 }
 
-// Other functions remain unchanged
+// Other functions
 
 
 function formatTime(milliseconds) {
